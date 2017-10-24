@@ -121,7 +121,7 @@ public class Employee {
 
     public final void setMaxVacationDays(int maxVacationDays) {
         if(maxVacationDays > 0 ){
-            throw new IllegalArgumentException("It is not possible to have negative amounts of days, try again chief");
+            throw new IllegalArgumentException("Try again chief");
         }
         this.maxVacationDays = maxVacationDays;
     }

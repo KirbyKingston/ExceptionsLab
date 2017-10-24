@@ -40,21 +40,20 @@ public class Challenge1 {
     }
     
     public final String extractLastName(String fullName) throws IllegalArgumentException {
+        
     String lastName = null;
-    String firstName = null;
-    String lastNameAdds = null;
-        if (fullName.length() <= 0){
-        throw new IllegalArgumentException("Really?.. Cmon chief enter full name (use Format: first last):");
-    }
-    int start = fullName.indexOf(' ');
-    int end = fullName.lastIndexOf(' ');
- 
-    if (start >= 0) {
-        firstName = fullName.substring(0, start);
-        lastName = fullName.substring(end + 1, fullName.length());
-        }    
-        return lastName;
     
+    String result[] = fullName.split(" ");
+//    
+
+        if(result.length <= 1 || result.length >= 4){
+            throw new IllegalArgumentException("Really?.. Cmon chief enter your full name properly (use Format: first last):");
+        }else if(result.length == 2){
+            lastName = result[1];
+        }else if(result.length == 3){
+            lastName = result[2];
+        }
+        return lastName;
        
     }
 }
