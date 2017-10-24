@@ -44,7 +44,7 @@ public class Challenge1 {
     String lastName = null;
     
     String result[] = fullName.split(" ");
-//    
+    
 
         if(result.length <= 1 || result.length >= 4){
             throw new IllegalArgumentException("Really?.. Cmon chief enter your full name properly (use Format: first last):");

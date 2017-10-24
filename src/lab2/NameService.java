@@ -18,13 +18,23 @@ public class NameService {
      * @throws IllegalArgumentException if fullName is null or empty or has 
      * fewer than two parts
      */
-    public String extractLastName(String fullName) {
+   
+   
+        public final String extractLastName(String fullName) throws IllegalArgumentException{
+        
         String lastName = null;
-        
-        // write your code here to extract the lastName and store in the
-        // above local variable
-        
+        String result[] = fullName.split(" ");
+
+        if(result.length <= 1 || result.length >= 4){
+            throw new IllegalArgumentException("Really?.. Cmon chief enter your full name properly (use Format: first last):");
+        }else if(result.length == 2){
+            lastName = result[1];
+        }else if(result.length == 3){
+            lastName = result[2];
+        }
         return lastName;
+       
+    
     }
     
 
