@@ -39,7 +39,7 @@ public class Challenge1 {
     
     }
     
-    public final String extractLastName(String fullName) throws IllegalArgumentException {
+    public final String extractLastName(String fullName) throws IllegalArgumentException{
         
     String lastName = null;
     
